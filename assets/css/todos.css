@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+:root {
+  --main-clr: #2d1f33;
+  --alt-clr: #302136;
+  --remove-clr: #642c49;
+  --accent-clr: #201020;
+  --font-clr: #a694bd;
+  --heading-clr: #b49bb9;
+  --input-clr: #35243b;
+  --input-focus-clr: #3b2842;
+  --input-font-clr: #8e88a3;
+}
+body {
+  background: linear-gradient(
+    83deg,
+    rgba(46, 24, 39, 1) 41%,
+    rgba(33, 20, 37, 1) 100%
+  );
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--font-clr);
+}
+h1 {
+  background: var(--accent-clr);
+  color: var(--heading-clr);
+  margin: 0;
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+#container {
+  background: var(--main-clr);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 30em;
+  min-width: 15em;
+  margin: 5em auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+  height: 2rem;
+  line-height: 2rem;
+}
+li:nth-child(2n) {
+  background: var(--alt-clr);
+}
+li span {
+  background: var(--remove-clr);
+  display: inline-block;
+  opacity: 0;
+  height: 2rem;
+  margin-right: 1rem;
+  text-align: center;
+  width: 0;
+  transition: 0.3s cubic-bezier(0.35, 0.05, 0.895, 0.035);
+}
+li:hover span {
+  width: 2rem;
+  opacity: 1;
+  cursor: pointer;
+}
+input {
+  background: var(--input-clr);
+  color: var(--input-font-clr);
+  border: none;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+}
+input::placeholder {
+  opacity: 0.6;
+  color: var(--input-font-clr);
+}
+input:focus {
+  background: var(--input-focus-clr);
+}
+
+.completed {
+  color: var(--input-font-clr);
+
+  text-decoration: line-through;
+}
+button {
+  color: var(--font-clr);
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 1.5em;
+  position: relative;
+}
+
+button span {
+  position: absolute;
+  transition: 0.3s;
+  background: var(--font-clr);
+  border-radius: 2px;
+}
+
+button span:first-of-type {
+  top: 25%;
+  bottom: 25%;
+  width: 10%;
+  left: 45%;
+  transform: rotate(90deg);
+}
+
+button span:last-of-type {
+  left: 25%;
+  right: 25%;
+  height: 10%;
+  top: 45%;
+}
+.rotate-1 {
+  transform: rotate(180deg) !important;
+}
