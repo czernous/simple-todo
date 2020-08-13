@@ -8,7 +8,7 @@ html {
 :root {
   --main-clr: #2d1f33;
   --alt-clr: #302136;
-  --remove-clr: #642c49;
+  --remove-clr: #420824;
   --accent-clr: #201020;
   --font-clr: #a694bd;
   --heading-clr: #b49bb9;
@@ -128,4 +128,15 @@ button span:last-of-type {
 }
 .rotate-1 {
   transform: rotate(180deg) !important;
+}
+@media (max-width: 580px) {
+  h1 {
+    font-size: 1.5rem;
+    padding-top: 0.5em;
+  }
+  button {
+    width: 25px;
+    height: 25px;
+    margin-top: 0.1em;
+  }
 }

@@ -2,6 +2,12 @@
 $('ul').on('click', 'li', (e) => {
   $(e.target).toggleClass('completed');
 });
+$('ul').on('swiped-right', 'li span', (e) => {
+  $(e.target).css({
+    width: '2rem',
+    opacity: '1',
+  });
+});
 // click on X to delete a todo
 $('ul').on('click', 'span', (e) => {
   $(e.currentTarget)
